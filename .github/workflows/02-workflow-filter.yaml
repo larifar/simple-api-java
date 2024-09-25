@@ -1,0 +1,13 @@
+name: 02 - Workflow
+on:
+  push:
+    branches:
+    - 'feat/**'
+
+jobs:
+  echo-job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step 1
+        run: echo "workflow disparado por ${{github.event_name}}"
+
